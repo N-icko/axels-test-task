@@ -1,31 +1,22 @@
-import React, { Component } from "react";
+import React, { useEffect, useState } from "react";
 import ListItemComponent from "./ListItemComponent";
 
-class ListItemContainer extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            propertyList: [],
-        };
-    }
+const ListItemContainer = () => {
+    const [propertyData, setPropertyData] = useState([]);
     
-    componentDidMount() {
+    useEffect(() => {
         fetch('http://demo2846384.mockable.io/')
             .then((response) => {
                 return response.json();
             })
             .then((data) => {
-                this.setState({
-                    propertyList: data
-                })
+                setPropertyData(data)
             })
-    }
+    }, []);
     
-    render() {
-        return (
-            <ListItemComponent data={this.state.propertyList}/>
-        )
-    }
+    return (
+        <ListItemComponent data={propertyData}/>
+    )
 }
 
 export default ListItemContainer;
