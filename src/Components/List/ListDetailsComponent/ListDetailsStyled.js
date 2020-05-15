@@ -1,13 +1,13 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const ListDetailsStyles = styled.div`
-.container {
-    text-align: center;
-    border: 1px blue solid;
-    border-radius: 25px;
-    padding: 1rem;
-    .row {
-        .item-slider {};
+    .container {
+        text-align: center;
+        border: 1px blue solid;
+        border-radius: 25px;
+        padding: 1rem;
+        .row {
+            .item-slider {};
             .item-description {
                 text-align: center;
                 
@@ -33,4 +33,5 @@ const ListDetailsStyles = styled.div`
             }
         }
     }`;
+
 export default ListDetailsStyles;

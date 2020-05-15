@@ -1,7 +1,7 @@
-import React from "react";
-import { Carousel, Col, Container, Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import ListDetailsStyles from "./ListDetailsStyled";
+import React from 'react';
+import { Carousel, Col, Container, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import ListDetailsStyles from './ListDetailsStyled';
 
 const ListDetailsComponent = () => {
     return (

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const ListItemStyles = styled.div`
     .container {
@@ -6,7 +6,6 @@ const ListItemStyles = styled.div`
         border: 1px blue solid;
         border-radius: 25px;
         padding: 1rem;
-
     }
     
     .row {

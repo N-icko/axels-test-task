@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import ListItemComponent from "./ListItemComponent";
+import React, { useEffect, useState } from 'react';
+import ListItemComponent from './ListItemComponent';
 
 const ListItemContainer = () => {
     const [propertyData, setPropertyData] = useState([]);
