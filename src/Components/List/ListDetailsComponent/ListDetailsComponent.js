@@ -1,9 +1,10 @@
 import React from 'react';
 import { Carousel, Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 import ListDetailsStyles from './ListDetailsStyled';
 
-const ListDetailsComponent = () => {
+const ListDetailsComponent = ({data, itemId}) => {
     return (
         <ListDetailsStyles>
             <Container>
@@ -47,16 +48,23 @@ const ListDetailsComponent = () => {
                             </Carousel.Item>
                         </Carousel>
                     </Col>
-                    <Col className='item-description' xs={12} sm={12} md={8}>
-                        <h1 className='description-title'>Title</h1>
-                        <h2 className='description-seller'>Seller name <span><em>seller phone</em></span></h2>
-                        <h3 className='description-about'>
-                            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis delectus enim
-                                eveniet magnam obcaecati odio omnis possimus suscipit. Aliquam, ducimus esse facere id
-                                inventore nihil nostrum possimus rem rerum voluptate!
-                            </div>
-                        </h3>
-                        <Link to="/" className="description-link d-block ml-auto bg-primary">Back</Link>
+                    <Col className='item-description' p-3 xs={12} sm={12} md={8}>
+                        {data.map((item) => {
+                            if (item.id === itemId) {
+                                return (
+                                    <div key={itemId}>
+                                        <h1 className='description-title'>{item.name}</h1>
+                                        <p>{item.price}<span> {item.currency}</span></p>
+                                        <h2 className='description-seller'>{item.seller}</h2>
+                                        <p>{item.description}</p>
+                                        <Link to="/"
+                                              className="description-link d-block ml-auto bg-primary"
+                                        > Back
+                                        </Link>
+                                    </div>
+                                )
+                            }
+                        })}
                     </Col>
                 </Row>
             </Container>
@@ -64,4 +72,11 @@ const ListDetailsComponent = () => {
     )
 }
 
-export default ListDetailsComponent;
+const mapStateToProps = state => {
+    return {
+        data: state.listState.data,
+        itemId: state.listState.itemId
+    };
+};
+
+export default connect(mapStateToProps, null)(ListDetailsComponent);

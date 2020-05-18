@@ -1,21 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { loadData } from '../../../Redux/Reducks';
 import ListItemComponent from './ListItemComponent';
 
 const ListItemContainer = () => {
-    const [propertyData, setPropertyData] = useState([]);
+    const dispatch = useDispatch()
     
     useEffect(() => {
-        fetch('http://demo2846384.mockable.io/')
-            .then((response) => {
-                return response.json();
-            })
-            .then((data) => {
-                setPropertyData(data)
-            })
-    }, []);
+        dispatch(loadData())
+    })
     
     return (
-        <ListItemComponent data={propertyData}/>
+        <div>
+            <ListItemComponent/>
+        </div>
     )
 }
 
