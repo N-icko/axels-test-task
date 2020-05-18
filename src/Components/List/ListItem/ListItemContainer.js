@@ -10,11 +10,7 @@ const ListItemContainer = () => {
         dispatch(loadData())
     })
     
-    return (
-        <div>
-            <ListItemComponent/>
-        </div>
-    )
+    return <ListItemComponent/>
 }
 
 export default ListItemContainer;
