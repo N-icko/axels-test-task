@@ -6,7 +6,6 @@ const ListItemStyles = styled.div`
         border: 1px blue solid;
         border-radius: 25px;
         padding: 1rem;
-        margin-top: 3rem;
     }
     
     .row {

@@ -2,12 +2,12 @@ import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { getItemId } from '../../../Redux/Reducks';
+import { getItemId } from '../../../Redux/re-ducks';
 import ListItemStyles from './ListItemStyled';
 
 const ListItemComponent = ({data, onTodoClick}) => {
     return (
-        <ListItemStyles>
+        <ListItemStyles className="pt-3">
             <Container>
                 <Row>
                     {data.map((item) => (
