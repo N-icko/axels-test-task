@@ -1,16 +1,13 @@
-import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { Provider } from 'react-redux'
-import { store } from '../Redux/store'
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import { ListDetailsComponent, ListItemContainer } from './index';
+import { ListDetailsComponent, ListItemContainer } from "./index";
 
-const App = () =>
-    <Provider store={store}>
-        <Router>
-            <Route exact path="/" component={ListItemContainer}/>
-            <Route exact path="/details" component={ListDetailsComponent}/>
-        </Router>
-    </Provider>
+const App = () => 
+	<Router>
+		<Route exact path="/" component={ListItemContainer} />
+		<Route exact path="/details" component={ListDetailsComponent} />
+	</Router>
+;
 
 export default App;
