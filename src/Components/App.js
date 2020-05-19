@@ -9,7 +9,7 @@ const App = () =>
     <Provider store={store}>
         <Router>
             <Route exact path="/" component={ListItemContainer}/>
-            <Route exact path="/details" component={ListDetailsComponent}/>
+            <Route exact path="/details/:id" component={ListDetailsComponent}/>
         </Router>
     </Provider>
 

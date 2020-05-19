@@ -16,7 +16,7 @@ const ListItemComponent = ({data, onTodoClick}) =>
                         <div className="item-description">
                             <p>{item.name}</p>
                             <p>Цена: {item.price}<span> {item.currency}</span></p>
-                            <Link to="/details"
+                            <Link to={`/details/${item.id}`}
                                   className="bg-primary"
                                   key={item.id}
                                   onClick={() => onTodoClick(item.id)}
