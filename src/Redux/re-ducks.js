@@ -7,24 +7,12 @@ const LOAD_DATA = 'LOAD_DATA'
 const CLICKED_ITEM = 'CLICKED_ITEM'
 
 //Action Creators
-export const putData = (data) => {
-    return {type: PUT_DATA, payload: data}
-}
-
-export const loadData = () => {
-    return {
-        type: LOAD_DATA
-    }
-}
-
+export const putData = (data) => ({type: PUT_DATA, payload: data})
+export const loadData = () => ({type: LOAD_DATA})
 export const getItemId = (id) => ({type: CLICKED_ITEM, id})
 
 //Reducer
-const listInitialState = {
-    data: [],
-    itemId: 0,
-}
-
+const listInitialState = {data: [], itemId: 0,}
 export const listReducer = (state = listInitialState, action) => {
     switch (action.type) {
         case PUT_DATA:
@@ -41,14 +29,14 @@ export const listReducer = (state = listInitialState, action) => {
             return state
     }
 }
-
 export const rootReducer = combineReducers({
     listState: listReducer,
 })
 
 //Saga
-function fetchData() {
-    return fetch('http://demo2846384.mockable.io/')
+const url = 'http://demo2846384.mockable.io/';
+export const fetchData = () => {
+    return fetch(url)
         .then(response => response.json())
 }
 
