@@ -66,11 +66,10 @@ const ListDetailsComponent = ({data, match}) => {
                     } else {
                         return false
                     }
-                })
-                }
+                })}
                 <Link to="/"
                       className="description-link d-block ml-auto bg-primary"
-                > Back
+                >Back
                 </Link>
             </Container>
         </ListDetailsStyles>

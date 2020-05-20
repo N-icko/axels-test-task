@@ -1,4 +1,4 @@
-import ListItemContainer from './ListItemContainer';
+import ListItemComponent from './ListItemComponent';
 
 
-export default ListItemContainer;
+export default ListItemComponent;

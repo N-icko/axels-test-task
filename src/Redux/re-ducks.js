@@ -4,12 +4,10 @@ import { call, put, takeEvery } from 'redux-saga/effects'
 //Actions
 const PUT_DATA = 'PUT_DATA'
 const LOAD_DATA = 'LOAD_DATA'
-const CLICKED_ITEM = 'CLICKED_ITEM'
 
 //Action Creators
 export const putData = (data) => ({type: PUT_DATA, payload: data})
 export const loadData = () => ({type: LOAD_DATA})
-export const getItemId = (id) => ({type: CLICKED_ITEM, id})
 
 //Reducer
 const listInitialState = {data: [], itemId: 0,}
@@ -19,11 +17,6 @@ export const listReducer = (state = listInitialState, action) => {
             return {
                 ...state,
                 data: action.payload
-            }
-        case CLICKED_ITEM:
-            return {
-                ...state,
-                itemId: action.id
             }
         default:
             return state

@@ -1,5 +1,5 @@
-import ListItemContainer from './List/ListItem';
+import ListItemComponent from './List/ListItem';
 import ListDetailsComponent from './List/ListDetailsComponent/ListDetailsComponent';
 
-export  { ListItemContainer };
+export  { ListItemComponent };
 export  { ListDetailsComponent };

@@ -3,7 +3,6 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import { getItemId } from '../../../Redux/re-ducks';
 import ListItemStyles from './ListItemStyled';
 
 const ListItemComponent = ({data, onTodoClick}) =>
@@ -19,7 +18,6 @@ const ListItemComponent = ({data, onTodoClick}) =>
                             <Link to={`/details/${item.id}`}
                                   className="bg-primary"
                                   key={item.id}
-                                  onClick={() => onTodoClick(item.id)}
                             >Show more</Link>
                         </div>
                     </Col>
@@ -34,10 +32,4 @@ const mapStateToProps = state => {
     };
 };
 
-const mapDispatchToProps = (dispatch) => ({
-    onTodoClick(id) {
-        dispatch(getItemId(id))
-    }
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(ListItemComponent);
+export default connect(mapStateToProps, null)(ListItemComponent);
