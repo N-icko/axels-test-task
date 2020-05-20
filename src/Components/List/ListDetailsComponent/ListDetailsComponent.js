@@ -10,9 +10,9 @@ const ListDetailsComponent = ({data, match}) => {
     return (
         <ListDetailsStyles className="pt-3">
             <Container>
-                {data.map((item) => {
-                    if (item.id === itemId) {
-                        return (
+                {data.map((item) => (
+                    <>
+                        {item.id === itemId && (
                             <Row key={item.id}>
                                 <Col className='item-slider' xs={12} sm={12} md={4}>
                                     <Carousel>
@@ -62,11 +62,9 @@ const ListDetailsComponent = ({data, match}) => {
                                     </div>
                                 </Col>
                             </Row>
-                        )
-                    } else {
-                        return false
-                    }
-                })}
+                        )}
+                    </>
+                ))}
                 <Link to="/"
                       className="description-link d-block ml-auto bg-primary"
                 >Back
@@ -76,10 +74,6 @@ const ListDetailsComponent = ({data, match}) => {
     )
 }
 
-const mapStateToProps = state => {
-    return {
-        data: state.listState.data,
-    };
-};
+const mapStateToProps = state => ({data: state.listState.data})
 
 export default connect(mapStateToProps, null)(ListDetailsComponent);

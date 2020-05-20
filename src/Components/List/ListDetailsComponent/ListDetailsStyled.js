@@ -9,31 +9,27 @@ const ListDetailsStyles = styled.div`
         
         .row {
             .item-slider {
-            float: left;};
+                float: left;
+            };
+            
             .item-description {
                 text-align: center;
                 
-                .description-title {
-                
-                };
-                .description-about {
-                
-                };
-                .description-seller {
-                
-                };
-            }
-        }
-                        .description-link {
-                    width: 125px !important;
-                    height: 30px;
-                    line-height: 30px;
-                    color: white;
-                    text-decoration: none;
-                    background-color: blue;
-                    border-radius: 5px;
-                };
-
+                .description-title {};
+                .description-about {};
+                .description-seller {};
+            };
+        };
+        
+        .description-link {
+            width: 125px !important;
+            height: 30px;
+            line-height: 30px;
+            color: white;
+            text-decoration: none;
+            background-color: blue;
+            border-radius: 5px;
+        };
     }`;
 
 export default ListDetailsStyles;
