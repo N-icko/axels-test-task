@@ -1,4 +1,4 @@
-###Axels test task
+Axels test task
 
 For install all dependencies use `npm install`
 
