@@ -2,16 +2,16 @@ import React from 'react';
 import toJson from 'enzyme-to-json';
 import configureStore from 'redux-mock-store';
 import { Provider } from "react-redux";
-import ListItemComponent  from './ListItemComponent';
+import ListDetailsComponent  from './ListDetailsComponent';
 
-describe('ListItemComponent', () => {
-    it('Create snapshot', () => {
+describe('ListDetailsComponent tests', () => {
+    it('Create ListDetailsComponent snapshot', () => {
         const mockStore = configureStore();
         const initialState = {};
         const store = mockStore(initialState);
         const wrapper = shallow(
             <Provider store={store}>
-                <ListItemComponent/>
+                <ListDetailsComponent/>
             </Provider>);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
