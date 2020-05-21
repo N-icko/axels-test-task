@@ -12,9 +12,9 @@ const ListDetailsComponent = ({ match }) => {
         <ListDetailsStyles className="pt-3">
             <Container>
                 {data.map((item) => (
-                    <>
+                    <React.Fragment key={item.id}>
                         {item.id === itemId && (
-                            <Row key={item.id}>
+                            <Row>
                                 <Col className='item-slider' xs={12} sm={12} md={4}>
                                     <Carousel>
                                         <Carousel.Item>
@@ -64,7 +64,7 @@ const ListDetailsComponent = ({ match }) => {
                                 </Col>
                             </Row>
                         )}
-                    </>
+                    </React.Fragment>
                 ))}
                 <Link to="/"
                       className="description-link d-block ml-auto bg-primary"
