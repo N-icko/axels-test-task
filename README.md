@@ -1,5 +1,15 @@
-Axels test task
+Axels - test task
 
-For install all dependencies use `npm install`
+Used technologies:
+<ul>
+    <li>React && Redux (ducks)</li>
+    <li>React Router && Redux-Saga</li>
+    <li>React Hooks && Redux Hooks</li>
+    <li>Jest && Enzyme unit-tests</li>
+</ul>
 
-For start app after install use `npm start`
+To install all dependencies use `npm install`
+
+To start app after installation use `npm start`
+
+If you have some troubles with build contact me at email.
