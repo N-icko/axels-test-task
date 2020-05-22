@@ -1,19 +1,20 @@
 import React from 'react';
 import { Carousel, Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import ListDetailsStyles from './ListDetailsStyled';
 
-const ListDetailsComponent = ({data, match}) => {
+const ListDetailsComponent = ({ match }) => {
+    const data = useSelector(state => state.listState.data);
     const itemId = match.params.id
     return (
         <ListDetailsStyles className="pt-3">
             <Container>
                 {data.map((item) => (
-                    <>
+                    <React.Fragment key={item.id}>
                         {item.id === itemId && (
-                            <Row key={item.id}>
+                            <Row>
                                 <Col className='item-slider' xs={12} sm={12} md={4}>
                                     <Carousel>
                                         <Carousel.Item>
@@ -63,7 +64,7 @@ const ListDetailsComponent = ({data, match}) => {
                                 </Col>
                             </Row>
                         )}
-                    </>
+                    </React.Fragment>
                 ))}
                 <Link to="/"
                       className="description-link d-block ml-auto bg-primary"
@@ -74,6 +75,4 @@ const ListDetailsComponent = ({data, match}) => {
     )
 }
 
-const mapStateToProps = state => ({data: state.listState.data})
-
-export default connect(mapStateToProps, null)(ListDetailsComponent);
+export default ListDetailsComponent;
