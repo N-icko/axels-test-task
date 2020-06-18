@@ -12,32 +12,32 @@ export const loadData = () => ({ type: LOAD_DATA })
 //Reducer
 export const listInitialState = { data: [] }
 export const listReducer = (state = listInitialState, action) => {
-    switch (action.type) {
-        case PUT_DATA:
-            return {
-                ...state,
-                data: action.payload
-            }
-        default:
-            return state
-    }
+  switch (action.type) {
+    case PUT_DATA:
+      return {
+        ...state,
+        data: action.payload
+      }
+    default:
+      return state
+  }
 }
 export const rootReducer = combineReducers({
-    listState: listReducer,
+  listState: listReducer,
 })
 
 //Saga
 export const url = 'http://demo2846384.mockable.io/';
 export const fetchData = () => {
-    return fetch(url)
-        .then(response => response.json())
+  return fetch(url)
+    .then(response => response.json())
 }
 
 export function* workerLoadData() {
-    const data = yield call(fetchData);
-    yield put(putData(data));
+  const data = yield call(fetchData);
+  yield put(putData(data));
 }
 
 export function* watchLoadData() {
-    yield takeEvery(LOAD_DATA, workerLoadData)
+  yield takeEvery(LOAD_DATA, workerLoadData)
 }
