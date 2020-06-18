@@ -1,6 +1,6 @@
-#Axels - test task
+Axels - test task
 
-###Used technologies:
+Used technologies:
 <ul>
     <li>React && Redux (ducks)</li>
     <li>React Router && Redux-Saga</li>
