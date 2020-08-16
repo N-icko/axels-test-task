@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Title #1",
+    "price": "100500",
+    "currency": "UAH",
+    "id": "0",
+    "preview": "https://picsum.photos/200/150",
+    "photos": "https://picsum.photos/200/150",
+    "seller": "User User",
+    "description": "Some text can be here... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque doloribus eos facilis id molestiae quia suscipit"
+  },
+  {
+    "name": "Title #2",
+    "price": "100600",
+    "currency": "UAH",
+    "id": "1",
+    "preview": "https://picsum.photos/200/150",
+    "photos": "https://picsum.photos/200/150",
+    "seller": "User User",
+    "description": "Some text can be here... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque doloribus eos facilis id molestiae quia suscipit"
+  },
+  {
+    "name": "Title #3",
+    "price": "100500",
+    "currency": "UAH",
+    "id": "2",
+    "preview": "https://picsum.photos/200/150",
+    "photos": "https://picsum.photos/200/150",
+    "seller": "User User",
+    "description": "Some text can be here... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque doloribus eos facilis id molestiae quia suscipit"
+  },
+  {
+    "name": "Title #4",
+    "price": "100800",
+    "currency": "UAH",
+    "id": "3",
+    "preview": "https://picsum.photos/200/150",
+    "photos": "https://picsum.photos/200/150",
+    "seller": "User User",
+    "description": "Some text can be here... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque doloribus eos facilis id molestiae quia suscipit"
+  },
+  {
+    "name": "Title #5",
+    "price": "100900",
+    "currency": "UAH",
+    "id": "4",
+    "preview": "https://picsum.photos/200/150",
+    "photos": "https://picsum.photos/200/150",
+    "seller": "User User",
+    "description": "Some text can be here... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque doloribus eos facilis id molestiae quia suscipit"
+  },
+  {
+    "name": "Title #6",
+    "price": "100990",
+    "currency": "UAH",
+    "id": "5",
+    "preview": "https://picsum.photos/200/150",
+    "photos": "https://picsum.photos/200/150",
+    "seller": "User User",
+    "description": "Some text can be here... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque doloribus eos facilis id molestiae quia suscipit"
+  }
+]

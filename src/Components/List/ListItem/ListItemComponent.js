@@ -1,12 +1,13 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux'; // Comment because add mockData;
+import data from '../../../mockData.json';
 
 import ListItemStyles from './ListItemStyled';
 
 const ListItemComponent = () => {
-  const data = useSelector(state => state.listState.data);
+  // const data = useSelector(state => state.listState.data); // Comment because add mockData;
   return (
     <ListItemStyles className="pt-3">
       <Container>
